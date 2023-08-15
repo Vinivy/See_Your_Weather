@@ -1,0 +1,96 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#background video {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*ess objetct-fit. vem a dizer se é para ser preenchido por todo*/
+  object-fit: cover;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  justify-self: center;
+  flex-direction: column;
+  position: relative;
+
+  height: fit-content;
+  width: 30vw;
+  border-radius: 15px;
+
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+  background-color: rgb(0, 0, 0);
+  z-index: 2;
+}
+
+input {
+  height: 30px;
+  width: 80%;
+
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  color: #fff;
+  padding: 0 0 0 10px;
+  background: rgb(0, 0, 0);
+}
+
+#Busca {
+  display: flex;
+  justify-content: space-around;
+  align-items: center ;
+
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+}
+
+#Busca button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+#Busca button ion-icon {
+  color: #fff;
+  height: 20px;
+  width: 20px;
+}
+
+#previsto {
+  display: grid;
+  justify-content: center;
+  height: max-content;
+}
