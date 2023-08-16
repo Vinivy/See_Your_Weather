@@ -94,3 +94,17 @@ input {
   justify-content: center;
   height: max-content;
 }
+
+#InfoClima {
+  font-size: 22px;
+  text-align: center;
+  font-family: system-ui;
+  font-weight: 400;
+}
+
+@media (max-width: 435px){
+  main {
+    height: fit-content;
+    width: 70vw;
+  }
+}

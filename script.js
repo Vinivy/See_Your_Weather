@@ -15,37 +15,37 @@ function Valor() {
       let weathertoday = document.querySelector('#InfoClima')
       const Temperatura = temperaturaKelvin - 272.15
       weathertoday.textContent = `${Temperatura.toFixed(0)}°C`
+
+      //Dependo da hora e da temperatura o Giff vai Mudar
+      // hora
+      let datetoday = new Date()
+      let hora = datetoday.getHours()
+      let imagemClimatica = document.querySelector('.imagemClima')
+      if (Temperatura >= 20) {
+        if (hora >= 6 && hora < 18) {
+          imagemClimatica.setAttribute(
+            'src',
+            './Assets/WeatherAnimation/DiadeSol.gif'
+          )
+        } else {
+          imagemClimatica.setAttribute(
+            'src',
+            './Assets/WeatherAnimation/DiaNubladox  .gif'
+          )
+        }
+      } else if (Temperatura >= 17 && hora >= 19) {
+        imagemClimatica.setAttribute(
+          'src',
+          './Assets/WeatherAnimation/NoiteDublada.gif'
+        )
+      } else if (Temperatura <= 17 && hora >= 19) {
+        imagemClimatica.setAttribute(
+          'src',
+          './Assets/WeatherAnimation/NoiteChuvosa.gif'
+        )
+      }
     })
     .catch(error => {
-      console.error('Ocorreu um erro:', error)
+      alert('Coloque nome de Cidades por favor', error)
     })
-
-  //Dependo da hora e da temperatura o Giff vai Mudar
-  // hora
-  let datetoday = new Date()
-  let hora = datetoday.getHours()
-  let imagemClimatica = document.querySelector('.imagemClima')
-  if (Temperatura <= 20) {
-    if (hora >= 6 && hora < 18) {
-      imagemClimatica.setAttribute(
-        'src',
-        './Assets/WeatherAnimation/DiaNublado.gif'
-      )
-    } else {
-      imagemClimatica.setAttribute(
-        'src',
-        './Assets/WeatherAnimation/NoiteDublada.gif'
-      )
-    }
-  } else if (Temperatura >= 30) {
-    imagemClimatica.setAttribute(
-      'src',
-      './Assets/WeatherAnimation/DiadeSol.gif'
-    )
-  } else if (Temperatura >= 20) {
-    imagemClimatica.setAttribute(
-      'src',
-      './Assets/WeatherAnimation/NubladoVento.gif'
-    )
-  }
 }
